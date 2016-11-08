@@ -1,0 +1,133 @@
+html {
+	width: 100%;
+	height: 100%;
+	perspective: 800px;
+}
+body {
+	width: 100%;
+	height: 100%;
+}
+.container {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+
+}
+.wrap {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	transform-origin: left center;
+	transform-style: preserve-3d;
+	transition: all 0.3s linear;
+}
+.wrap .slide {
+	width: 35%;
+	height: 100%;
+	position: absolute;
+	background-color: #666;
+	transform-origin: right center;
+	transform: translateX(-100%) rotateY(-30deg);
+}
+.wrap .slide .slide_content li {
+	width: 100%;
+	height: 600px;
+}
+.wrap .slide .slide_content .me {
+	/*text-align: center;*/
+}
+.wrap .slide .slide_content .me .avatar {
+	height: 150px;
+	width: 45%;
+	padding-top: 10px;
+	padding-left: 10px;
+/*	border: 1px dashed green;*/
+}
+.wrap .slide .slide_content .me h2 {
+	width: 55%;
+	float: right;	
+	padding-top: 10px;
+	padding-left: 10px;
+	border-bottom: 1px dashed #999;
+}
+.wrap .slide .slide_content .me h3 {
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.wrap .slide .slide_content .github {
+	display: none;
+}
+.wrap .slide .slide_content .github p {
+	font-size: 20px;
+	padding-top: 20px;
+	padding-left: 10px;
+}
+.wrap .slide .slide_content .github a {
+	font-size: 20px;
+	color: #ff0000;
+	text-decoration: underline;	
+	padding-top: 10px;
+	padding-left: 10px;
+}
+.wrap .main {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: rgba(200,200,200,0.5);
+}
+.wrap .main .left_bar {
+	height: 100%;
+	width: 4%;
+	display: inline-block;
+	background-color: silver;
+}
+.wrap .main .left_bar .info_a {
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	display: block;
+	padding-top: 5px;
+}
+.wrap .main .left_bar .info_a span {
+	height: 80%;
+	width: 98%;
+	display: block;
+	text-align: center;
+	font-size: 30px;
+	color: green;
+	/*border:1px solid rgba(100,100,100,1);*/
+}
+.wrap .main .right_content {
+	height: 100%;
+	width:96%;
+	float: right;
+	display: inline-block;
+}
+.wrap .main .right_content h1 {
+	padding-top: 100px;
+	text-align: center;
+}
+/*画布*/
+.wrap .main .right_content #canvas {
+	position: absolute;
+	display: inline-block;
+	top: 25%;
+	left: 25%;
+}
+.wrap .main #canvas canvas:nth-child(2) {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.mask {
+	width: 61%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: none;
+	background-image: linear-gradient(to right,transparent,#000);
+}
